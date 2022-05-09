@@ -2,7 +2,7 @@ import React, { useEffect, useRef, Suspense, useState } from 'react'
 import * as THREE from 'three'
 import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
-import { OrbitControls, Html, useProgress } from '@react-three/drei'
+import { Html, useProgress } from '@react-three/drei'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
@@ -134,7 +134,7 @@ const WelcomeSection = () => {
                   <Rig>
                     <GltfModel
                       modelPath='./models/model.glb'
-                      scale={10}
+                      scale={2}
                       position={[0, 1, 0]}
                       set={setHover}
                     />
@@ -157,7 +157,7 @@ const WelcomeSection = () => {
                 </group>
                 <Intro />
               </Suspense>
-              <OrbitControls enableRotate={true} enableZoom={false} />
+              {/* <OrbitControls enableRotate={true} enableZoom={false} /> */}
             </Canvas>
           </div>
 
@@ -180,12 +180,12 @@ const WelcomeSection = () => {
 }
 
 const Intro = () => {
-  // const [vec] = useState(() => new THREE.Vector3())
+  const [vec] = useState(() => new THREE.Vector3())
   return useFrame((state) => {
-    // state.camera.position.lerp(
-    //   vec.set(state.mouse.x * 1, 3 + state.mouse.y * 1, 14),
-    //   0.06
-    // )
+    state.camera.position.lerp(
+      vec.set(state.mouse.x * 0, 3 + state.mouse.y * 0, 14),
+      0.06
+    )
     state.camera.lookAt(0, 0, 0)
   })
 }
