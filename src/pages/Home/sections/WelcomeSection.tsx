@@ -81,7 +81,7 @@ const GltfModel = ({
         <primitive
           ref={ref}
           object={nodes.eye01}
-          position={[0, 0.08, 0.21]}
+          position={[0, 0.08, 0.22]}
           scale={0.05}
         ></primitive>
       </mesh>
@@ -92,7 +92,7 @@ const GltfModel = ({
           kernelSize={2}
           luminanceThreshold={0}
           luminanceSmoothing={0.2}
-          intensity={0.1}
+          intensity={0.2}
         />
       </EffectComposer>
     </>
@@ -182,7 +182,7 @@ const Intro = () => {
   const [vec] = useState(() => new THREE.Vector3())
   return useFrame((state) => {
     state.camera.position.lerp(
-      vec.set(state.mouse.x * 0, 3 + state.mouse.y * 0, 18),
+      vec.set(state.mouse.x * 0, 3 + state.mouse.y * 0, 21),
       0.06
     )
     state.camera.lookAt(0, 0, 0)
