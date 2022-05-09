@@ -51,6 +51,7 @@ const GltfModel = ({
     const t = state.clock.getElapsedTime()
 
     ref.current.scale.z += dir * 0.002
+    ref.current.rotation.x -= dir * 0.04
     if (t % 10 < 1 && dir === 0) {
       setDir(-1)
     }
@@ -76,13 +77,12 @@ const GltfModel = ({
           set(false)
         }}
       >
-        <primitive object={nodes.shenti01} position={[0, -0.15, -0.26]} scale={0.05} />
         <primitive object={nodes.pingmu} position={[0, 0, 0]} scale={0.05} />
         <primitive object={nodes.yankuang} position={[0, 0, 0]} scale={0.05} />
         <primitive
           ref={ref}
           object={nodes.eye01}
-          position={[0, 0.09, 0.19]}
+          position={[0, 0.08, 0.21]}
           scale={0.05}
         ></primitive>
       </mesh>
