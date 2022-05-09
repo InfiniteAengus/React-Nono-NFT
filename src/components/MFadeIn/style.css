@@ -1,0 +1,19 @@
+.fade-in-section {
+  opacity: 0;
+  /* transform: translateY(20vh); */
+  visibility: hidden;
+  -webkit-transition: opacity 1200ms ease-out, visibility 1200ms ease-out, -webkit-transform 600ms ease-out;
+  transition: opacity 1200ms ease-out, visibility 1200ms ease-out, -webkit-transform 600ms ease-out;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out, -webkit-transform 600ms ease-out;
+  will-change: opacity, transform, visibility;
+  width: 100%;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  visibility: visible;
+}
+/*# sourceMappingURL=style.css.map */

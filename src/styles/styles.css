@@ -231,6 +231,26 @@ header .container .mobile-menu-wrap.opened span {
 /* stylelint-enable at-rule-blacklist */
 /* stylelint-disable */
 /* stylelint-enable */
+main h2 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 29px;
+  color: var(--primary-theme-color);
+  text-align: center;
+}
+
+main h2 i {
+  color: #86eae9;
+  font-style: normal;
+}
+
+@media (max-width: 767px) {
+  main h2 {
+    font-size: 39px;
+    line-height: 124.5%;
+  }
+}
+
 /**
     All media rules hosts here
  */
@@ -302,26 +322,6 @@ footer .container {
 
 .opacity-up {
   opacity: 1 !important;
-}
-
-h2 {
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 29px;
-  color: var(--primary-theme-color);
-  text-align: center;
-}
-
-h2 i {
-  color: #86eae9;
-  font-style: normal;
-}
-
-@media (max-width: 767px) {
-  h2 {
-    font-size: 39px;
-    line-height: 124.5%;
-  }
 }
 
 :root {

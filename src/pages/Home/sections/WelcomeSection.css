@@ -79,16 +79,6 @@
   z-index: 0;
 }
 
-.section-welcome .container .overlay {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  pointer-events: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#00000000), color-stop(#00000000), to(#000000));
-  background: linear-gradient(180deg, #00000000, #00000000, #000000);
-}
-
 .section-welcome .container .loading-progress {
   font-family: 'sans-serif';
   font-size: 15px;
@@ -178,8 +168,7 @@
 
 @media (max-width: 992px) {
   .section-welcome .container .welcome-description {
-    left: 30px;
-    width: 250px;
+    display: none;
   }
 }
 
@@ -248,6 +237,12 @@
   transform: rotate(-45deg);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .section-welcome .container .btn-more {
+    right: unset;
+  }
 }
 
 .hidden {

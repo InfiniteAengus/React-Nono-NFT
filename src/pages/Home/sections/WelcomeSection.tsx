@@ -11,7 +11,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 import './WelcomeSection.scss'
 
-function Rig({ children }: any) {
+const Rig = ({ children }: any) => {
   const ref = useRef<any>()
   useFrame((state) => {
     ref.current.rotation.y = THREE.MathUtils.lerp(
@@ -101,12 +101,11 @@ const GltfModel = ({
   )
 }
 
-const WelcomeSection = (props: any) => {
-  const { forwardedRef } = props
+const WelcomeSection = () => {
   const [hover, setHover] = useState<boolean>(false)
 
   useEffect(() => {
-    disableBodyScroll(forwardedRef.current)
+    disableBodyScroll(document.body)
   }, []) //eslint-disable-line
 
   const handleViewMore = () => {
@@ -116,13 +115,13 @@ const WelcomeSection = (props: any) => {
       document.getElementById('welcome')?.classList.add('hidden')
       document.getElementById('machine')?.classList.add('opacity-up')
       document.getElementById('about')?.classList.add('opacity-up')
-      enableBodyScroll(forwardedRef.current)
+      enableBodyScroll(document.body)
     }, 1500)
   }
 
   return (
     <>
-      <section className='section-welcome' id='welcome' ref={forwardedRef}>
+      <section className='section-welcome' id='welcome'>
         <div className='container' id='welcome-container'>
           <div style={{ width: '100vw', height: '100vh' }} className='canvas'>
             <Canvas
@@ -184,7 +183,7 @@ const WelcomeSection = (props: any) => {
   )
 }
 
-function Intro() {
+const Intro = () => {
   const [vec] = useState(() => new THREE.Vector3())
   return useFrame((state) => {
     state.camera.position.lerp(
@@ -195,7 +194,7 @@ function Intro() {
   })
 }
 
-function Loader() {
+const Loader = () => {
   const { progress } = useProgress()
   return (
     <Html center className='loading-progress'>
@@ -203,4 +202,5 @@ function Loader() {
     </Html>
   )
 }
+
 export default WelcomeSection
