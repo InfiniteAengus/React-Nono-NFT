@@ -1,0 +1,43 @@
+/**
+    All media rules hosts here
+ */
+/* stylelint-disable at-rule-blacklist */
+/* stylelint-enable at-rule-blacklist */
+/* stylelint-disable */
+/* stylelint-enable */
+.section-team {
+  position: relative;
+}
+
+.section-team .team-list {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  row-gap: 50px;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  padding: 60px;
+}
+
+@media (max-width: 992px) {
+  .section-team .team-list {
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .section-team .team-list .team-member-item .line {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-team .team-list {
+    padding: 20px;
+    -ms-grid-columns: (minmax(0, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+/*# sourceMappingURL=TeamSection.css.map */

@@ -1,0 +1,36 @@
+@import '../../../styles/mixin/media';
+
+.section-team {
+  position: relative;
+
+  .team-list {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    row-gap: 50px;
+    column-gap: 50px;
+
+    padding: 60px;
+  }
+
+  @include media-md {
+    .team-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      .team-member-item {
+        .line {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  @include media-sm {
+    .team-list {
+      padding: 20px;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}

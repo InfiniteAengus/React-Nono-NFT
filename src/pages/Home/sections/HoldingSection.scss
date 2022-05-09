@@ -1,0 +1,130 @@
+@import '../../../styles/mixin/media';
+
+.section-holding {
+  .line {
+    height: 50px;
+  }
+
+  .holding-content {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    p {
+      font-family: 'JetBrains Mono';
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+
+      color: rgba(230, 230, 230, 0.8);
+    }
+
+    .holding-description {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      border: 2px solid var(--primary-theme-color);
+      border-right: none;
+
+      padding: 25px;
+
+      h3 {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 48px;
+
+        max-width: 450px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        padding-left: 20px;
+        ul {
+          list-style: none;
+
+          padding-left: 0;
+        }
+      }
+    }
+
+    .image-wrapper {
+      position: relative;
+      padding: 30px;
+
+      img {
+        filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.25));
+      }
+
+      .images-desktop {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        row-gap: 40px;
+        column-gap: 40px;
+      }
+
+      .image-wrapper-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(
+          180deg,
+          #006eff 0%,
+          #00e0ff 50.52%,
+          #006cff 100%
+        );
+        opacity: 0.3;
+        filter: blur(80px);
+      }
+
+      .react-3d-carousel {
+        display: none;
+
+        .slider-left {
+          display: none;
+          opacity: 0;
+        }
+        .slider-right {
+          display: none;
+          opacity: 0;
+        }
+      }
+    }
+
+    @include media-md {
+      grid-template-columns: 1fr;
+
+      gap: 30px;
+
+      .holding-description {
+        margin-left: unset;
+        padding: 0;
+        width: 100%;
+
+        border: none;
+      }
+
+      .image-wrapper {
+        padding: 10px;
+
+        .images-desktop {
+          display: none;
+        }
+
+        .react-3d-carousel {
+          display: block;
+
+          img {
+            border: 2px solid rgba(230, 230, 230, 0.7);
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}

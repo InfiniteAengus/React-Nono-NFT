@@ -1,0 +1,24 @@
+@import '../mixin/media';
+
+main {
+  h2 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 29px;
+
+    color: var(--primary-theme-color);
+
+    text-align: center;
+
+    i {
+      color: #86eae9;
+
+      font-style: normal;
+    }
+
+    @include media-sm {
+      font-size: 39px;
+      line-height: 124.5%;
+    }
+  }
+}

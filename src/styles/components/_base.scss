@@ -1,0 +1,42 @@
+@import '../mixin/media';
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-md {
+    padding: 0 30px;
+  }
+}
+
+.line {
+  position: relative;
+  z-index: 1;
+  height: 300px;
+  width: 2px;
+  background-color: var(--primary-theme-color);
+
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-md {
+    height: 150px;
+    opacity: 0;
+  }
+}
+
+.opacity-down {
+  opacity: 0 !important;
+}
+
+.opacity-up {
+  opacity: 1 !important;
+}

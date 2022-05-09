@@ -1,0 +1,31 @@
+@mixin oblique-bg {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 150%;
+        height: 90%;
+        top: 0;
+        bottom: 0;
+        left: -25%;
+        margin: auto 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(3deg);
+
+        @content;
+
+        @include media-sm {
+            height: 96%;
+        }
+
+        @include media-tn {
+            height: 97%;
+        }
+    }
+}

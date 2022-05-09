@@ -1,0 +1,84 @@
+@import '../../../styles/mixin/media';
+
+.section-faq {
+  position: relative;
+
+  padding-bottom: 50px !important;
+
+  img {
+    display: block;
+ 
+    position: absolute;
+    z-index: -1;
+    width: 360px;
+
+    left: calc(50% - 180px);
+    top: -170px;
+  }
+
+  .faq-wrapper {
+    max-width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    span {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 32px;
+
+      color: white;
+    }
+
+    .faq-item {
+      
+      .faq-title {
+        padding: 20px 0;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+
+        cursor: pointer;
+      }
+
+      .faq-content {
+        height: 0;
+        transform: scaleY(0);
+        transition: all 0.5s ease;
+
+        font-family: 'EudoxusSans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+
+        color: white;
+      }
+
+      &.opened {
+        .faq-content {
+          height: 100px;
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+
+  @include media-sm {
+    flex-direction: column;
+
+    gap: 0;
+    
+    .faq-image-wrapper {
+      width: 100%;
+
+      h2 {
+        z-index: 1;
+      }
+
+      img {
+        margin-top: -70px;
+      }
+    }
+  }
+}

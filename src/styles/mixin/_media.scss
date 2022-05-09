@@ -1,0 +1,88 @@
+/**
+    All media rules hosts here
+ */
+
+$width-huge: 1600px;
+$width-large: 1200px;
+$width-middle: 992px;
+$width-small: 767px;
+$width-smaller: 575px;
+$width-tiny: 480px;
+$width-micro: 350px;
+
+/* stylelint-disable at-rule-blacklist */
+@mixin media-mc {
+    @media (max-width: $width-micro) {
+        @content;
+    }
+}
+
+@mixin media-tn {
+    @media (max-width: $width-tiny) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media (max-width: $width-small) {
+        @content;
+    }
+}
+
+@mixin media-sm-up {
+    @media (min-width: $width-small + 1) {
+        @content;
+    }
+}
+
+@mixin media-smm {
+    @media (max-width: $width-smaller) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media (max-width: $width-middle) {
+        @content;
+    }
+}
+
+@mixin media-md-up {
+    @media (min-width: $width-middle + 1px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media (max-width: $width-large) {
+        @content;
+    }
+}
+
+@mixin media-hg {
+    @media (max-width: $width-huge) {
+        @content;
+    }
+}
+
+@mixin media-tv {
+    @media (min-width: $width-huge + 1) {
+        @content;
+    }
+}
+/* stylelint-enable at-rule-blacklist */
+
+/* stylelint-disable */
+@mixin media-retina {
+    @media
+        (-webkit-min-device-pixel-ratio: 1.5),
+        ( min--moz-device-pixel-ratio: 1.5),
+        ( -o-min-device-pixel-ratio: 1.5/1),
+        ( min-device-pixel-ratio: 1.5),
+        ( min-resolution: 144dpi),
+        ( min-resolution: 1.5dppx) {
+
+        @content;
+    }
+}
+/* stylelint-enable */

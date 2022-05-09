@@ -1,0 +1,126 @@
+/**
+    All media rules hosts here
+ */
+/* stylelint-disable at-rule-blacklist */
+/* stylelint-enable at-rule-blacklist */
+/* stylelint-disable */
+/* stylelint-enable */
+section.section-machine {
+  padding-top: 100px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+section.section-machine div[class^='line'] {
+  position: relative;
+  background: var(--primary-theme-color);
+}
+
+section.section-machine h2 {
+  margin-bottom: 5px;
+  margin-left: -250px;
+}
+
+section.section-machine .line-group-1 {
+  position: relative;
+  z-index: 1;
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  background: none !important;
+}
+
+section.section-machine .line-group-1 .line-1 {
+  width: 170px;
+  height: 2px;
+}
+
+section.section-machine .line-group-1 .line-2 {
+  margin-left: 170px;
+  margin-top: -2px;
+  width: 2px;
+  height: 200px;
+}
+
+section.section-machine .line-group-1 .line-3 {
+  margin-left: 170px;
+  width: 15px;
+  height: 2px;
+}
+
+section.section-machine .line-group-1 .line-4 {
+  margin-left: 185px;
+  margin-top: -2px;
+  width: 2px;
+  height: 13px;
+}
+
+section.section-machine .line-group-2 {
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background: none !important;
+}
+
+section.section-machine .line-group-2 .line-1 {
+  margin-left: auto;
+  width: 2px;
+  height: 15px;
+}
+
+section.section-machine .line-group-2 .line-2 {
+  width: 15px;
+  height: 2px;
+  margin-left: 38px;
+}
+
+section.section-machine .line-group-2 .line-3 {
+  width: 2px;
+  height: 200px;
+  margin-left: 53px;
+  margin-top: -2px;
+}
+
+section.section-machine .line-group-2 .line-4 {
+  width: 35px;
+  height: 2px;
+  margin-left: 20px;
+}
+
+section.section-machine .machine {
+  position: absolute;
+  z-index: 0;
+  margin-top: -220px;
+  margin-left: 20px;
+  width: 480px;
+  height: 480px;
+  left: calc(50% - 240px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.section-machine .machine h4 {
+  position: absolute;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 27px;
+  color: var(--primary-theme-color);
+}
+
+section.section-machine .machine img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=MachineSection.css.map */

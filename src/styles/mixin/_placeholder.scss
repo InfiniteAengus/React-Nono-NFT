@@ -1,0 +1,23 @@
+/**
+    Add placeholder prefix for every browser
+  */
+
+/* stylelint-disable */
+@mixin placeholder {
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+/* stylelint-enable */

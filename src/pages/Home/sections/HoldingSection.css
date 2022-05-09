@@ -1,0 +1,133 @@
+/**
+    All media rules hosts here
+ */
+/* stylelint-disable at-rule-blacklist */
+/* stylelint-enable at-rule-blacklist */
+/* stylelint-disable */
+/* stylelint-enable */
+.section-holding .line {
+  height: 50px;
+}
+
+.section-holding .holding-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.section-holding .holding-content p {
+  font-family: 'JetBrains Mono';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(230, 230, 230, 0.8);
+}
+
+.section-holding .holding-content .holding-description {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid var(--primary-theme-color);
+  border-right: none;
+  padding: 25px;
+}
+
+.section-holding .holding-content .holding-description h3 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 48px;
+  max-width: 450px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section-holding .holding-content .holding-description p {
+  padding-left: 20px;
+}
+
+.section-holding .holding-content .holding-description p ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section-holding .holding-content .image-wrapper {
+  position: relative;
+  padding: 30px;
+}
+
+.section-holding .holding-content .image-wrapper img {
+  -webkit-filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.25));
+}
+
+.section-holding .holding-content .image-wrapper .images-desktop {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 40px;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.section-holding .holding-content .image-wrapper .image-wrapper-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#006eff), color-stop(50.52%, #00e0ff), to(#006cff));
+  background: linear-gradient(180deg, #006eff 0%, #00e0ff 50.52%, #006cff 100%);
+  opacity: 0.3;
+  -webkit-filter: blur(80px);
+          filter: blur(80px);
+}
+
+.section-holding .holding-content .image-wrapper .react-3d-carousel {
+  display: none;
+}
+
+.section-holding .holding-content .image-wrapper .react-3d-carousel .slider-left {
+  display: none;
+  opacity: 0;
+}
+
+.section-holding .holding-content .image-wrapper .react-3d-carousel .slider-right {
+  display: none;
+  opacity: 0;
+}
+
+@media (max-width: 992px) {
+  .section-holding .holding-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .section-holding .holding-content .holding-description {
+    margin-left: unset;
+    padding: 0;
+    width: 100%;
+    border: none;
+  }
+  .section-holding .holding-content .image-wrapper {
+    padding: 10px;
+  }
+  .section-holding .holding-content .image-wrapper .images-desktop {
+    display: none;
+  }
+  .section-holding .holding-content .image-wrapper .react-3d-carousel {
+    display: block;
+  }
+  .section-holding .holding-content .image-wrapper .react-3d-carousel img {
+    border: 2px solid rgba(230, 230, 230, 0.7);
+    border-radius: 10px;
+  }
+}
+/*# sourceMappingURL=HoldingSection.css.map */

@@ -1,0 +1,61 @@
+@import './layout/header';
+@import './layout/main';
+@import './layout/footer';
+
+@import './components/base';
+
+:root {
+  --primary-theme-color: #00E0FF;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Iceland';
+  font-weight: 700;
+
+  scroll-behavior: smooth;
+
+  color: white;
+}
+
+body {
+  background: #000;
+  // background-image: url('../assets/images/background.png');
+  height: unset !important;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+#root {
+  position: absolute;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // background: rgb(25, 25, 25);
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #202020;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

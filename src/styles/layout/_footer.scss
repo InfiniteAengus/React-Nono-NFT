@@ -1,0 +1,10 @@
+@import '../mixin/media';
+
+footer {
+  position: relative;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,25 @@
+@mixin ie {
+    body.ie & {
+        @content;
+    }
+}
+
+@mixin not-ie {
+    body:not(.ie) & {
+        @content;
+    }
+}
+
+@mixin form-height($height) {
+    @include not-ie {
+        min-height: $height;
+    }
+
+    @include ie {
+        min-height: $height;
+        height: auto !important;
+        height: $height; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+        //height: $height;
+        //min-height: max-content;
+    }
+}

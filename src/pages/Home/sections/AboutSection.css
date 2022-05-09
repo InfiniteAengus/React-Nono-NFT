@@ -1,0 +1,58 @@
+/**
+    All media rules hosts here
+ */
+/* stylelint-disable at-rule-blacklist */
+/* stylelint-enable at-rule-blacklist */
+/* stylelint-disable */
+/* stylelint-enable */
+.section-about {
+  width: 100%;
+  padding-top: 350px;
+  padding-bottom: 350px;
+  position: relative;
+}
+
+.section-about .effect-ellipse-1 {
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: calc(50% - 1122px);
+  width: 2209px;
+  height: 610px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 141, 74, 0.8)), color-stop(41.87%, rgba(201, 55, 251, 0.8)), to(rgba(255, 168, 142, 0.8)));
+  background: linear-gradient(270deg, rgba(255, 141, 74, 0.8) 0%, rgba(201, 55, 251, 0.8) 41.87%, rgba(255, 168, 142, 0.8) 100%);
+  opacity: 0.85;
+  -webkit-filter: blur(461px);
+          filter: blur(461px);
+}
+
+.section-about img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-about span {
+  display: block;
+  font-family: 'EudoxusSans';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .section-about {
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
+  .section-about .effect-ellipse-1 {
+    height: 392px;
+  }
+}
+/*# sourceMappingURL=AboutSection.css.map */

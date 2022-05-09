@@ -1,0 +1,19 @@
+/**
+    Mixin for text clip support
+    Todo: add ie fix
+ */
+/* stylelint-disable */
+@mixin text-clip($ie-color) {
+    & {
+        color: $ie-color;
+    }
+
+    body:not(.ie) &{
+        @content;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+}
+/* stylelint-enable */

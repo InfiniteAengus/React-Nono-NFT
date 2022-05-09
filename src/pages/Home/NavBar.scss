@@ -1,0 +1,19 @@
+.nav-bar {
+  position: fixed;
+
+  z-index: 10;
+
+  right: 50px;
+  top: calc(50vh - 100px);
+
+  height: 200px;
+
+  a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    line-height: 17px;
+
+    margin-top: 10px;
+  }
+}

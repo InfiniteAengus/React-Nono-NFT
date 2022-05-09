@@ -1,0 +1,107 @@
+@import '../../../styles/mixin/media';
+
+.section-roadmap {
+  position: relative;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .roadmap-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .timeline-progress {
+      position: absolute;
+      width: 2px;
+      z-index: -2;
+      height: 100%;
+      background-color: var(--primary-theme-color);
+    }
+
+    .timeline-item {
+      // height: 200px;
+
+      display: grid;
+      grid-template-columns: 1fr 100px 1fr;
+
+      .roadmap-content {
+        padding-top: 30px;
+        padding-right: 50px;
+        justify-self: flex-end;
+        align-self: flex-end;
+        font-size: 35px;
+      }
+
+      .roadmap-title {
+        // align-self: flex-end;
+        h4 {
+          margin-top: 20px;
+
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 34px;
+        }
+        p {
+          font-family: 'JetBrains Mono';
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 25px;
+
+          color: rgba(220, 220, 220, 0.6);
+        }
+      }
+
+      .roadmap-line {
+        position: relative;
+        .circle {
+          position: absolute;
+          background-color: var(--primary-theme-color);
+          border: 8px solid rgba(0, 0, 0, 0.85);
+          box-sizing: border-box;
+
+          top: 20px;
+          left: calc(50% - 18px);
+
+          width: 36px;
+          height: 36px;
+
+          max-height: 36px;
+          max-width: 36px;
+          min-height: 36px;
+          min-width: 36px;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+
+  @include media-md {
+    .roadmap-wrapper {
+      .timeline-progress {
+        left: 24px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        grid-template-columns: 50px 1fr;
+        .roadmap-title {
+          margin-left: 20px;
+        }
+
+        .roadmap-content {
+          display: none;
+        }
+      }
+    }
+  }
+}

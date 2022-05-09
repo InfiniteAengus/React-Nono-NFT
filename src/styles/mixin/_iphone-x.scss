@@ -1,0 +1,5 @@
+@mixin iphone-x {
+    body.iphone-x & {
+        @content;
+    }
+}
