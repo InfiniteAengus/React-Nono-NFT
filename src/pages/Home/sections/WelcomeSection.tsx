@@ -51,7 +51,6 @@ const GltfModel = ({
     const t = state.clock.getElapsedTime()
 
     ref.current.scale.z += dir * 0.002
-    ref.current.rotation.x -= dir * 0.04
     if (t % 10 < 1 && dir === 0) {
       setDir(-1)
     }
@@ -87,7 +86,7 @@ const GltfModel = ({
         ></primitive>
       </mesh>
       {/* <pointLight position={[0, 5, 2]} intensity={2} /> */}
-      <pointLight position={[0, 1.1, 0]} intensity={0.07} ref={lightRef} />
+      <pointLight position={[0, 1.1, 0]} intensity={0.05} ref={lightRef} />
       <EffectComposer multisampling={2} autoClear={false} ref={composer}>
         <Bloom
           kernelSize={2}
@@ -183,7 +182,7 @@ const Intro = () => {
   const [vec] = useState(() => new THREE.Vector3())
   return useFrame((state) => {
     state.camera.position.lerp(
-      vec.set(state.mouse.x * 0, 3 + state.mouse.y * 0, 14),
+      vec.set(state.mouse.x * 0, 3 + state.mouse.y * 0, 18),
       0.06
     )
     state.camera.lookAt(0, 0, 0)
