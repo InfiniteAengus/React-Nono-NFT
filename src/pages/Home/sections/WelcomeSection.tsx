@@ -13,13 +13,13 @@ const Rig = ({ children }: any) => {
   useFrame((state) => {
     ref.current.rotation.y = THREE.MathUtils.lerp(
       ref.current.rotation.y,
-      (state.mouse.x * Math.PI) / 10,
-      0.05
+      (state.mouse.x * Math.PI) / 6,
+      0.1
     )
     ref.current.rotation.x = THREE.MathUtils.lerp(
       ref.current.rotation.x,
-      (-1 * (state.mouse.y * Math.PI)) / 10,
-      0.05
+      (-1 * (state.mouse.y * Math.PI)) / 6,
+      0.1
     )
   })
   return <group ref={ref}>{children}</group>
@@ -81,17 +81,17 @@ const GltfModel = ({
         <primitive
           ref={ref}
           object={nodes.eye01}
-          position={[0, 0.08, 0.22]}
+          position={[0, 0.08, 0.24]}
           scale={0.05}
         ></primitive>
       </mesh>
       {/* <pointLight position={[0, 5, 2]} intensity={2} /> */}
       <pointLight position={[0, 1.1, 0]} intensity={0.05} ref={lightRef} />
-      <EffectComposer multisampling={12} autoClear={false} ref={composer}>
+      <EffectComposer multisampling={40} autoClear={false} ref={composer}>
         <Bloom
           kernelSize={2}
           luminanceThreshold={0}
-          luminanceSmoothing={0.2}
+          luminanceSmoothing={0.6}
           intensity={0.1}
         />
       </EffectComposer>
@@ -182,7 +182,7 @@ const Intro = () => {
   const [vec] = useState(() => new THREE.Vector3())
   return useFrame((state) => {
     state.camera.position.lerp(
-      vec.set(state.mouse.x * 0, 3 + state.mouse.y * 0, 21),
+      vec.set(state.mouse.x * 0, 3 + state.mouse.y * 0, 26),
       0.06
     )
     state.camera.lookAt(0, 0, 0)
