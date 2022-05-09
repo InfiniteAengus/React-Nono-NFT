@@ -87,12 +87,12 @@ const GltfModel = ({
       </mesh>
       {/* <pointLight position={[0, 5, 2]} intensity={2} /> */}
       <pointLight position={[0, 1.1, 0]} intensity={0.05} ref={lightRef} />
-      <EffectComposer multisampling={2} autoClear={false} ref={composer}>
+      <EffectComposer multisampling={12} autoClear={false} ref={composer}>
         <Bloom
           kernelSize={2}
           luminanceThreshold={0}
           luminanceSmoothing={0.2}
-          intensity={0.2}
+          intensity={0.1}
         />
       </EffectComposer>
     </>
@@ -126,7 +126,7 @@ const WelcomeSection = () => {
               shadows
               gl={{ alpha: false }}
               camera={{ position: [0, 3, 100], fov: 15 }}
-              dpr={[1, 1.5]}
+              dpr={[1, 2]}
             >
               <Suspense fallback={<Loader />}>
                 <group position={[0, -1, 0]}>
