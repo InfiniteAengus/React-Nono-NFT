@@ -3,10 +3,7 @@ import * as THREE from 'three'
 import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { OrbitControls, Html, useProgress } from '@react-three/drei'
-import {
-  EffectComposer,
-  Bloom,
-} from '@react-three/postprocessing'
+import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 import './WelcomeSection.scss'
@@ -79,22 +76,24 @@ const GltfModel = ({
           set(false)
         }}
       >
+        <primitive object={nodes.shenti01} position={[0, -0.15, -0.26]} scale={0.05} />
         <primitive object={nodes.pingmu} position={[0, 0, 0]} scale={0.05} />
         <primitive object={nodes.yankuang} position={[0, 0, 0]} scale={0.05} />
         <primitive
           ref={ref}
           object={nodes.eye01}
-          position={[0, 0.1, 0.19]}
+          position={[0, 0.09, 0.19]}
           scale={0.05}
         ></primitive>
       </mesh>
-      <pointLight position={[0, 1.1, 0]} intensity={0.2} ref={lightRef} />
+      {/* <pointLight position={[0, 5, 2]} intensity={2} /> */}
+      <pointLight position={[0, 1.1, 0]} intensity={0.07} ref={lightRef} />
       <EffectComposer multisampling={2} autoClear={false} ref={composer}>
         <Bloom
-          kernelSize={3}
+          kernelSize={2}
           luminanceThreshold={0}
-          luminanceSmoothing={0.8}
-          intensity={0.3}
+          luminanceSmoothing={0.2}
+          intensity={0.1}
         />
       </EffectComposer>
     </>
@@ -135,7 +134,7 @@ const WelcomeSection = () => {
                   <Rig>
                     <GltfModel
                       modelPath='./models/model.glb'
-                      scale={2}
+                      scale={10}
                       position={[0, 1, 0]}
                       set={setHover}
                     />
@@ -158,10 +157,7 @@ const WelcomeSection = () => {
                 </group>
                 <Intro />
               </Suspense>
-              <OrbitControls
-                enableRotate={true}
-                enableZoom={false}
-              />
+              <OrbitControls enableRotate={true} enableZoom={false} />
             </Canvas>
           </div>
 
@@ -184,13 +180,13 @@ const WelcomeSection = () => {
 }
 
 const Intro = () => {
-  const [vec] = useState(() => new THREE.Vector3())
+  // const [vec] = useState(() => new THREE.Vector3())
   return useFrame((state) => {
-    state.camera.position.lerp(
-      vec.set(state.mouse.x * 0, 3 + state.mouse.y * 0, 14),
-      0.05
-    )
-    // state.camera.lookAt(0, 0, 0)
+    // state.camera.position.lerp(
+    //   vec.set(state.mouse.x * 1, 3 + state.mouse.y * 1, 14),
+    //   0.06
+    // )
+    state.camera.lookAt(0, 0, 0)
   })
 }
 
