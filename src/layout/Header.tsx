@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import { enableBodyScroll } from 'body-scroll-lock'
 import $ from 'jquery'
 
@@ -22,6 +23,7 @@ const navLinks = [
 ]
 
 const Header = () => {
+  const navigate = useNavigate()
   const [menuOpened, setMenuOpened] = useState<boolean>(false)
 
   const toggleMenu = () => {
@@ -29,6 +31,8 @@ const Header = () => {
   }
 
   const handleNavClick = (id: string) => {
+    navigate('/')
+    
     if (!document.getElementById('welcome')?.classList.contains('hidden')) {
       document
         .getElementById('welcome-container')

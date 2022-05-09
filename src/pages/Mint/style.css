@@ -1,0 +1,172 @@
+/**
+    All media rules hosts here
+ */
+/* stylelint-disable at-rule-blacklist */
+/* stylelint-enable at-rule-blacklist */
+/* stylelint-disable */
+/* stylelint-enable */
+main.mint-page {
+  width: 100%;
+  height: calc(100vh - 103px);
+  max-height: calc(100vh - 103px);
+  margin-top: 103px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 150px;
+}
+
+main.mint-page .section-nft {
+  width: 50%;
+  position: relative;
+}
+
+main.mint-page .section-nft .nft-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#82466f), to(#5860a2));
+  background: linear-gradient(0deg, #82466f, #5860a2);
+  opacity: 0.5;
+  border-radius: 50%;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+}
+
+main.mint-page .section-nft img {
+  position: relative;
+  z-index: 1;
+}
+
+main.mint-page .section-mint {
+  width: 50%;
+}
+
+main.mint-page .section-mint h2 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: left;
+  margin: 0;
+}
+
+main.mint-page .section-mint .mint-box {
+  padding: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(80, 80, 80, 0.3)), to(rgba(40, 40, 40, 0.3)));
+  background: linear-gradient(180deg, rgba(80, 80, 80, 0.3), rgba(40, 40, 40, 0.3));
+  border: 1px solid var(--primary-theme-color);
+  border-radius: 20px;
+}
+
+main.mint-page .section-mint .mint-box h3 {
+  font-size: 35px;
+  font-weight: 300;
+  margin: 0;
+}
+
+main.mint-page .section-mint .mint-box .mint-amount {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  background-color: rgba(40, 40, 40, 0.9);
+  border: 1px solid var(--primary-theme-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 25px;
+}
+
+main.mint-page .section-mint .mint-box .mint-amount > div {
+  cursor: pointer;
+}
+
+main.mint-page .section-mint .mint-box .price-wrapper {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+main.mint-page .section-mint .mint-box .price-wrapper .price-box {
+  width: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(80, 80, 80, 0.3)), to(rgba(40, 40, 40, 0.3)));
+  background: linear-gradient(180deg, rgba(80, 80, 80, 0.3), rgba(40, 40, 40, 0.3));
+  border: 1px solid rgba(60, 60, 60, 0.9);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+main.mint-page .section-mint .mint-box .price-wrapper .price-box p {
+  font-size: 25px;
+  margin: 0;
+}
+
+main.mint-page .section-mint .mint-box .price-wrapper .price-box span {
+  font-size: 20px;
+}
+
+main.mint-page .section-mint .mint-box button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 10px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid var(--primary-theme-color);
+  background: var(--primary-theme-color);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+main.mint-page .section-mint .mint-box button:hover {
+  background: #00E0FF;
+}
+
+@media (max-width: 992px) {
+  main.mint-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px;
+    height: unset;
+    max-height: unset;
+    gap: 30px;
+  }
+  main.mint-page .section-mint,
+  main.mint-page .section-nft {
+    width: 100%;
+  }
+  main.mint-page .section-mint h2 {
+    font-size: 35px;
+  }
+  main.mint-page .section-mint .mint-box h3 {
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
