@@ -33,7 +33,7 @@ const faqContent = [
     content: 'ERC-721A',
   },
   {
-    title: '8.What wallet for mint?',
+    title: '8. What wallet for mint?',
     content: 'MetaMask.',
   },
 ]

@@ -1,5 +1,6 @@
 .m-button {
-  border: 1px solid var(--primary-theme-color);
+  border: 2px solid var(--primary-theme-color);
+  border-radius: 10px;
   padding: 10px 40px;
   font-family: 'Iceland';
   font-style: normal;
@@ -11,6 +12,8 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  -webkit-filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
 }
 
 .m-button .m-button-back {

@@ -20,10 +20,12 @@ function App() {
         <Route
           path='/'
           element={
-            <SmoothScroll>
-              <Home />
-              <Footer />
-            </SmoothScroll>
+            <>
+              <SmoothScroll>
+                <Home />
+                <Footer />
+              </SmoothScroll>
+            </>
           }
         ></Route>
       </Routes>

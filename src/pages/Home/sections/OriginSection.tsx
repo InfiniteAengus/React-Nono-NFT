@@ -23,6 +23,10 @@ const OriginSection = () => {
   return (
     <section className='section-origin container' id='about'>
       <div className='origin-background' />
+      <div className='origin-header'>
+        <h3>NoNo</h3>
+        <div className='line'></div>
+      </div>
       <div className='image-wrapper'>
         <p ref={descriptionRef}>
           NoNo is an assistant robot from a game called SEER (赛尔号). In SEER,
