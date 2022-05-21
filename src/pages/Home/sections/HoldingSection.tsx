@@ -3,10 +3,10 @@ import MButton from 'components/MButton'
 import './HoldingSection.scss'
 
 let slides = [
-  <img src='/images/home/holding/fur1.gif' alt='holding-1' />,
-  <img src='/images/home/holding/fur2.gif' alt='holding-2' />,
-  <img src='/images/home/holding/green.gif' alt='holding-3' />,
-  <img src='/images/home/holding/jail.gif' alt='holding-4' />,
+  <img src='/images/home/holding/holding-1.gif' alt='holding-1' />,
+  <img src='/images/home/holding/holding-2.gif' alt='holding-2' />,
+  <img src='/images/home/holding/holding-3.gif' alt='holding-3' />,
+  <img src='/images/home/holding/holding-4.gif' alt='holding-4' />,
 ]
 
 const HoldingSection = () => {

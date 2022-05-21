@@ -1,3 +1,5 @@
+@import '../../styles/mixin/media';
+
 .fade-in-section {
   opacity: 0;
   /* transform: translateY(20vh); */
@@ -6,6 +8,10 @@
     visibility 1200ms ease-out;
   will-change: opacity, transform, visibility;
   width: 100%;
+
+  @include media-md {
+    opacity: 1;
+  }
 }
 
 .fade-in-section.is-visible {
