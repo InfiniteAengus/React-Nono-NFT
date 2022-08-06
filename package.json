@@ -1,5 +1,6 @@
 {
-  "name": "my-app-ts",
+  "name": "NoNo Minting Dapp",
+  "author": "James Bell",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
